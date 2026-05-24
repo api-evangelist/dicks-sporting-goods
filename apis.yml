@@ -26,6 +26,8 @@ common:
     url: https://github.com/dickssportinggoods
   - type: Website
     url: https://www.dickssportinggoods.com
+  - type: LLMsTxt
+    url: https://www.dickssportinggoods.com/llms.txt
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
