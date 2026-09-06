@@ -1,13 +1,13 @@
 aid: dicks-sporting-goods
 url: https://raw.githubusercontent.com/api-evangelist/dicks-sporting-goods/refs/heads/main/apis.yml
 name: Dick's Sporting Goods
-description: >-
-  Dick's Sporting Goods is a leading omni-channel sporting goods retailer offering
-  an extensive assortment of authentic, high-quality sports equipment, apparel,
-  footwear, and accessories. As a Fortune 500 retailer, Dick's Sporting Goods does
-  not currently publish a public developer portal or APIs; this repository is
-  maintained as a placeholder for any APIs, developer tools, or machine-readable
-  artifacts that may emerge.
+description: 'DICK''S Sporting Goods is a Fortune 500 omni-channel sporting goods retailer selling sports
+  equipment, apparel, footwear and accessories across the DICK''S, House of Sport, Golf Galaxy, Public
+  Lands and Going Going Gone banners. It publishes no developer portal, no API reference and no machine-readable
+  contract: the storefront is an Angular single-page app that answers HTTP 200 with the same shell for
+  every path, and neither api. nor developer.dickssportinggoods.com resolves in DNS. Its B2B integration
+  surface is X12 EDI over AS2/SFTP through third-party trading networks, with vendor guidelines handed
+  out as PDFs. The company does run a named Vulnerability Disclosure Program on Bugcrowd.'
 deliveryModel:
   model: unknown
   open_source: false
@@ -35,28 +35,69 @@ type: Index
 position: Consuming
 access: 3rd-Party
 tags:
-  - Retail
-  - Sporting Goods
-  - Fortune 500
-  - E-Commerce
+- Retail
+- Sporting Goods
+- Fortune 500
+- E-Commerce
+- Omnichannel Commerce
+- Consumer Goods
 tags_raw:
-  - Retail
-  - Sporting Goods
-  - Fortune 500
-  - eCommerce
+- Retail
+- Sporting Goods
+- Fortune 500
+- eCommerce
+- Omnichannel Commerce
+- Consumer Goods
 created: '2026-03-21'
-modified: '2026-04-28'
+modified: '2026-09-06'
 specificationVersion: '0.23'
 apis: []
 common:
-  - type: DomainSecurity
-    url: security/dicks-sporting-goods-domain-security.yml
-  - type: GitHubOrganization
-    url: https://github.com/dickssportinggoods
-  - type: Website
-    url: https://www.dickssportinggoods.com
-  - type: LlmsText
-    url: https://www.dickssportinggoods.com/llms.txt
+- type: DomainSecurity
+  url: security/dicks-sporting-goods-domain-security.yml
+- type: GitHubOrganization
+  url: https://github.com/dickssportinggoods
+- type: Website
+  url: https://www.dickssportinggoods.com
+- type: Packages
+  url: packages/dicks-sporting-goods-packages.yml
+- type: VulnerabilityDisclosure
+  url: security/dicks-sporting-goods-vulnerability-disclosure.yml
+- type: Security
+  url: https://bugcrowd.com/engagements/dickssportinggoods
+- type: PrivacyPolicy
+  url: https://www.dickssportinggoods.com/s/policy/privacy-policy
+- type: TermsOfService
+  url: https://www.dickssportinggoods.com/s/policy/terms-of-use
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com
+x-enrichment:
+  date: '2026-09-06'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: 'DICK''S ships software only as end-user storefront and app experiences: there is no developer
+    portal, no API reference and no SDK anywhere, api. and developer.dickssportinggoods.com do not resolve
+    in DNS, and the storefront returns the identical Angular app shell with HTTP 200 for /openapi.json,
+    /llms.txt, /apis.json and a negative-control path that cannot exist — so every apparent hit is a soft
+    404.'
+  evidence:
+  - url: https://www.dickssportinggoods.com/.well-known/dicks-sporting-goods-negative-control-7f3ab91c.json
+    status: 200
+  - url: https://www.dickssportinggoods.com/openapi.json
+    status: 200
+  - url: https://www.dickssportinggoods.com/llms.txt
+    status: 200
+  - url: https://api.dickssportinggoods.com/openapi.json
+    status: 0
+  - url: https://developer.dickssportinggoods.com/openapi.json
+    status: 0
+  - url: https://www.dickssportinggoods.com/s/policy/privacy-policy
+    status: 403
+  - url: https://bugcrowd.com/engagements/dickssportinggoods
+    status: 200
+  checked: '2026-09-06'

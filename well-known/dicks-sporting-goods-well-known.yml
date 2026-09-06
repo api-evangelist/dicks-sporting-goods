@@ -1,0 +1,157 @@
+generated: '2026-09-06'
+method: probed
+source: live HTTP probes of every host this record knows
+note: >-
+  NEGATIVE RESULT, RECORDED DELIBERATELY. Every path below was requested with a
+  browser User-Agent. www.dickssportinggoods.com and dickssportinggoods.com are an
+  Angular single-page application behind Akamai: the origin answers HTTP 200 with the
+  same ~2.7-3.2KB HTML app shell for EVERY path, including a control path that cannot
+  exist. investors.dicks.com behaves the same way, answering 200 with the body
+  "Invalid key" for every /.well-known/* request. NONE of the 200s below is a document.
+  No WellKnown and no SecurityTxt pointer is emitted for this provider, because the
+  provider does not serve those surfaces.
+hit_count: 0
+hosts:
+  - host: https://www.dickssportinggoods.com
+    soft_404_control:
+      path: /.well-known/dicks-sporting-goods-negative-control-7f3ab91c.json
+      status: 200
+      content_type: text/html; charset=utf-8
+      bytes: 3211
+      verdict: failed
+      note: A path that cannot exist returned 200 with the Angular app shell.
+    path_echo_control: failed
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        file: null
+        note: HTML app shell (2691 bytes), not RFC 9116 text — soft 404.
+      - path: /.well-known/openid-configuration
+        status: 200
+        file: null
+        note: HTML app shell, not OIDC discovery — soft 404.
+      - path: /.well-known/oauth-authorization-server
+        status: 200
+        file: null
+        note: HTML app shell, not RFC 8414 metadata — soft 404.
+      - path: /.well-known/oauth-protected-resource
+        status: 200
+        file: null
+        note: HTML app shell, not RFC 9728 metadata — soft 404.
+      - path: /.well-known/api-catalog
+        status: 200
+        file: null
+        note: HTML app shell, not RFC 9727 — soft 404.
+      - path: /.well-known/ai-plugin.json
+        status: 200
+        file: null
+        note: HTML app shell, not JSON — soft 404.
+      - path: /.well-known/agent-card.json
+        status: 200
+        file: null
+        note: HTML app shell (3211 bytes), not an A2A AgentCard — soft 404.
+      - path: /.well-known/agent.json
+        status: 200
+        file: null
+        note: HTML app shell, not a legacy A2A AgentCard — soft 404.
+      - path: /.well-known/apis.json
+        status: 200
+        file: null
+        note: HTML app shell, no apis/specificationVersion key — soft 404.
+      - path: /apis.json
+        status: 200
+        file: null
+        note: HTML app shell, no apis/specificationVersion key — soft 404.
+      - path: /llms.txt
+        status: 200
+        file: null
+        note: >-
+          HTML app shell (2691 bytes), not llms.txt. This is the URL the repo previously
+          advertised as a LlmsText pointer; that pointer has been removed as a soft-404.
+      - path: /openapi.json
+        status: 200
+        file: null
+        note: HTML app shell, no openapi/paths keys — soft 404.
+      - path: /swagger.json
+        status: 200
+        file: null
+        note: HTML app shell, no swagger/paths keys — soft 404.
+  - host: https://dickssportinggoods.com
+    soft_404_control:
+      path: /.well-known/dicks-sporting-goods-negative-control-7f3ab91c.json
+      status: 200
+      content_type: text/html; charset=utf-8
+      verdict: failed
+    path_echo_control: failed
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        file: null
+        note: Same Angular app shell as the www host — soft 404.
+      - path: /.well-known/agent-card.json
+        status: 200
+        file: null
+        note: Same Angular app shell as the www host — soft 404.
+      - path: /.well-known/api-catalog
+        status: 200
+        file: null
+        note: Same Angular app shell as the www host — soft 404.
+      - path: /apis.json
+        status: 200
+        file: null
+        note: Same Angular app shell as the www host — soft 404.
+      - path: /llms.txt
+        status: 200
+        file: null
+        note: Same Angular app shell as the www host — soft 404.
+  - host: https://investors.dicks.com
+    soft_404_control:
+      path: /.well-known/dsg-negative-control-7f3ab91c.json
+      status: 200
+      content_type: text/html; charset=utf-8
+      body: Invalid key
+      verdict: failed
+    path_echo_control: failed
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        file: null
+        note: Body is the string "Invalid key", not RFC 9116 text — soft 404.
+      - path: /llms.txt
+        status: 404
+        file: null
+      - path: /apis.json
+        status: 404
+        file: null
+  - host: https://api.dickssportinggoods.com
+    resolves: false
+    documents:
+      - path: /.well-known/security.txt
+        status: 0
+        file: null
+        note: Host does not resolve — no DNS A/AAAA record.
+      - path: /openapi.json
+        status: 0
+        file: null
+        note: Host does not resolve — no DNS A/AAAA record.
+  - host: https://developer.dickssportinggoods.com
+    resolves: false
+    documents:
+      - path: /.well-known/security.txt
+        status: 0
+        file: null
+        note: Host does not resolve — there is no developer subdomain.
+      - path: /openapi.json
+        status: 0
+        file: null
+        note: Host does not resolve — there is no developer subdomain.
+  - host: https://dsgcorp.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 521
+        file: null
+        note: Cloudflare 521 — origin down.
+      - path: /openapi.json
+        status: 521
+        file: null
+        note: Cloudflare 521 — origin down.

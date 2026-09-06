@@ -1,0 +1,80 @@
+generated: '2026-09-06'
+method: searched
+source: >-
+  https://registry.npmjs.org/-/v1/search?text=dickssportinggoods — plus per-package
+  registry metadata at registry.npmjs.org. PyPI, RubyGems, crates.io, NuGet, Maven
+  Central and pkg.go.dev were also searched and returned nothing first-party.
+note: >-
+  DICK'S Sporting Goods publishes NO API client SDK in any registry. The two packages
+  below are the only first-party artifacts the public registries carry, and they are an
+  internal front-end DESIGN SYSTEM for the dickssportinggoods.com storefront — Angular
+  UI components and shared SCSS — not clients for any API. They are recorded here as an
+  honest inventory of what the company ships publicly, NOT as SDKs: no `SDKs` pointer is
+  emitted in apis.yml, because the `sdk_count` check asks whether an integrator can call
+  this company's API from a supported client library, and the answer is no.
+  Both are abandoned: the `latest` dist-tag still points at 0.0.1 from 2019-03-15, and the
+  newest publish of any kind is a canary from 2019-06-21 — over seven years stale.
+sdk_count: 0
+package_count: 2
+packages:
+  - language: javascript
+    registry: npm
+    name: "@dickssportinggoods/angular"
+    url: https://www.npmjs.com/package/@dickssportinggoods/angular
+    install: npm install @dickssportinggoods/angular
+    official: true
+    kind: ui-component-library
+    api_client: false
+    version: 0.0.1
+    published: '2019-03-15'
+    latest_any_tag:
+      version: 0.0.2-dev.348
+      tag: canary
+      published: '2019-06-21'
+    version_count: 143
+    license: ISC
+    description: >-
+      "This repo is the home for the DSG's Angular component library. Find usage and
+      documentation at [Dick's Design System]()." — verbatim from the registry manifest.
+      The documentation link in the provider's own description is empty, so no design-system
+      docs URL exists to record.
+    note: >-
+      `dist-tags.latest` is 0.0.1, published 2019-03-15, read verbatim from the registry
+      `time` map. 143 versions exist but all of them predate 2019-06-22.
+  - language: javascript
+    registry: npm
+    name: "@dickssportinggoods/common"
+    url: https://www.npmjs.com/package/@dickssportinggoods/common
+    install: npm install @dickssportinggoods/common
+    official: true
+    kind: shared-styles
+    api_client: false
+    version: 0.0.1
+    published: '2019-03-15'
+    latest_any_tag:
+      version: 0.0.2-dev.348
+      tag: canary
+      published: '2019-06-21'
+    version_count: 143
+    license: ISC
+    description: >-
+      "This is a common module that only contains `.scss` and `.ts` files with common code
+      that can be shared between component libraries of different frameworks." — verbatim
+      from the registry manifest.
+registries_searched:
+  - {registry: npm, url: "https://registry.npmjs.org/-/v1/search?text=dickssportinggoods", result: "2 first-party packages, both abandoned since 2019"}
+  - {registry: pypi, url: "https://pypi.org/pypi/dickssportinggoods/json", status: 404, result: none}
+  - {registry: rubygems, result: none}
+  - {registry: crates.io, result: none}
+  - {registry: nuget, result: none}
+  - {registry: maven-central, result: none}
+  - {registry: pkg.go.dev, result: none}
+source_code:
+  - url: https://github.com/dickssportinggoods
+    status: 200
+    public_repos: 3
+    note: >-
+      The company's GitHub organization holds three repositories, all last pushed in 2021
+      and none of them a client library or a contract: firehose_exporter (a Cloud Foundry
+      Prometheus exporter), github-actions-exporter, and manifests (Kustomize manifests).
+      No .proto, no OpenAPI, no SDK.
