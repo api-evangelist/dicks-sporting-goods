@@ -1,7 +1,9 @@
 ---
 title: What 10 retail executives have to say about AI
 url: https://www.retaildive.com/news/retail-executives-artificial-intelligence-nrf/809654/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Dick''s Sporting Goods" press release artificial intelligence'
 position: 2
 source: serpapi-google

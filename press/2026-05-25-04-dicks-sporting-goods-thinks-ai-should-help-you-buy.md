@@ -1,7 +1,9 @@
 ---
 title: DICK'S Sporting Goods thinks AI should help you buy ...
 url: https://www.reddit.com/r/ArtificialInteligence/comments/1tkxwhj/dicks_sporting_goods_thinks_ai_should_help_you/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Dick''s Sporting Goods" press release artificial intelligence'
 position: 4
 source: serpapi-google

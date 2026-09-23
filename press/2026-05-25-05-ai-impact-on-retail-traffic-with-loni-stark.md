@@ -1,7 +1,9 @@
 ---
 title: AI Impact on Retail Traffic with Loni Stark
 url: https://www.linkedin.com/posts/schwab-network_adobes-loni-stark-breaks-down-how-ai-is-activity-7452401605628301312-SoaA
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Dick''s Sporting Goods" press release artificial intelligence'
 position: 5
 source: serpapi-google
