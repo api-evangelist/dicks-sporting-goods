@@ -1,4 +1,4 @@
-# Dick's Sporting Goods (dicks-sporting-goods)
+# Dick's Sporting Goods
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,35 +64,84 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Dick's Sporting Goods is a leading omni-channel sporting goods retailer offering an extensive assortment of authentic, high-quality sports equipment, apparel, footwear, and accessories. As a Fortune 500 retailer, Dick's Sporting Goods does not currently publish a public developer portal or APIs. This repository captures the APIs, developer tools, and machine-readable API artifacts for Dick's Sporting Goods as they become available.
+DICK'S Sporting Goods is a Fortune 500 omni-channel sporting goods retailer selling sports equipment, apparel, footwear and accessories across the DICK'S, House of Sport, Golf Galaxy, Public Lands and Going Going Gone banners. It publishes no developer portal, no API reference and no machine-readable contract: the storefront is an Angular single-page app that answers HTTP 200 with the same shell for every path, and neither api. nor developer.dickssportinggoods.com resolves in DNS. Its B2B integration surface is X12 EDI over AS2/SFTP through third-party trading networks, with vendor guidelines handed out as PDFs. The company does run a named Vulnerability Disclosure Program on Bugcrowd.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/dicks-sporting-goods/refs/heads/main/apis.yml)
+**Areas:** Retail · Sporting Goods · Fortune 500 · E-Commerce · Omnichannel Commerce · Consumer Goods
 
-## Scope
+## Dick's Sporting Goods on APIs.io
 
-- **Type:** Index
-- **Position:** Consumer
-- **Access:** 3rd-Party
+Everything profiled for Dick's Sporting Goods is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/dicks-sporting-goods/](https://apis.io/providers/dicks-sporting-goods/)** — or go straight to one of the APIs or properties below.
 
-## Tags:
+### Published properties
 
-- Retail, Sporting Goods, Fortune 500, eCommerce
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Timestamps
+#### Security (2)
 
-- **Created:** 2026-03-21
-- **Modified:** 2026-04-28
+Authentication, trust centre, and vulnerability disclosure.
 
-## APIs
+- [Dicks Sporting Goods Domain Security](https://apis.io/security/dicks-sporting-goods/dicks-sporting-goods-domain-security/)
+- [Dicks Sporting Goods Vulnerability Disclosure](https://apis.io/security/dicks-sporting-goods/dicks-sporting-goods-vulnerability-disclosure/)
 
-No public APIs have been documented yet. Dick's Sporting Goods operates omni-channel retail and eCommerce but does not publish a public developer portal at this time. Contributions are welcome if you discover relevant partner or storefront APIs.
+## Where to find this API
 
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.dickssportinggoods.com)
+- [Security](https://bugcrowd.com/engagements/dickssportinggoods)
+- [Terms of service](https://www.dickssportinggoods.com/s/policy/terms-of-use)
+- [Privacy policy](https://www.dickssportinggoods.com/s/policy/privacy-policy)
+- [GitHub](https://github.com/dickssportinggoods)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
+**Kin Score 12.2** — emerging · rubric 0.24.0 · scored 2026-10-17
 
-**Email:** kin@apievangelist.com
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 13.2 |
+| Developer ergonomics | 0.0 |
+| Access clarity | 21.1 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 19.6** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/dicks-sporting-goods/](https://apis.io/providers/dicks-sporting-goods/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Dick's Sporting Goods: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/dicks-sporting-goods/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
